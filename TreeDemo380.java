@@ -154,7 +154,20 @@ class BinarySearchTree{
     @return int returns max number in tree
    */
    public int getMax(Node root){
-	  //implement me
+        {
+        if (node == null)
+        return Integer.MIN_VALUE;
+
+        int res = node.data;
+        int lres = findMax(node.left);
+        int rres = findMax(node.right);
+
+        if (lres > res)
+        res = lres;
+        if (rres > res)
+        res = rres;
+        return res;
+        }
    }
    
    
