@@ -114,8 +114,17 @@ class BinarySearchTree{
     @return boolean
    */
    public boolean find(Node root, int key){
-	  //implement me
-      return false;           
+        if(root == null){
+        return false;
+        }
+
+        if(root.value == key){
+        return true;
+        }else if(key < root.value){
+        return find(root.left, key);
+        }else{
+        return find(root.right, key);
+        }
    }
 
 
