@@ -1,3 +1,7 @@
+/**
+ * @author Mohammed Mohideen
+ */
+
 class Node{
    int value;
    Node left, right;
@@ -37,57 +41,81 @@ class BinarySearchTree{
    
    
    
-   /*
+   /**
+
    pre-order traversal
+   @param root Root of the tree
    */
    public void preOrderTraversal(Node root){
-      //implement me
+      //base case
+      if(root == null){
+         return;
+      }
+
+      System.out.print(root.value+" ");
+      //go left recursively
+      preOrderTraversal(root.left);
+      //go right recursively
+      preOrderTraversal(root.right);
+   }
    }
 
-   
-   
-   /*
-   in-order traversal
-   */
+
+
+   /**
+
+    in-order traversal
+    @param root Root of the tree
+    */
    public void inOrderTraversal(Node root){
       //implement me
    }
-   
-   
-   
-   /*
-   post-order traversal
-   */
+
+
+
+   /**
+
+    post-order traversal
+    @param root Root of the tree
+    */
    public void postOrderTraversal(Node root){
       //implement me
    }
-   
-   
-   
-   /*
+
+
+
+   /**
    a method to find the node in the tree
    with a specific value
+    @param root Root of the tree
+    @param key Index to find
+
+    @return boolean
    */
    public boolean find(Node root, int key){
 	  //implement me
       return false;           
    }
-   
-   
-   
-   /*
+
+
+
+   /**
    a method to find the node in the tree
    with a smallest key
+    @param root Root of the tree
+    @return int Minimum number in tree
    */
    public int getMin(Node root){
       //implement me
    }
-  
-  
-  
-   /*
+
+
+
+   /**
    a method to find the node in the tree
    with a largest key
+    @param root Root of the tree
+    @return int returns max number in tree
    */
    public int getMax(Node root){
 	  //implement me
